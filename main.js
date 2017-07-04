@@ -17,8 +17,8 @@ $(document).ready(function() {
             dataType: "json",
           success: function(result){
             // Get heading console.log(data[1][0]);
-       // Get description console.log(data[2][0]);
-       // Get link console.log(data[3][0]);
+            // Get description console.log(data[2][0]);
+            // Get link console.log(data[3][0]);
             console.log(result);
             $("#wiki-result").html('');
             for(var i = 0; i < result[1].length; i++) {
