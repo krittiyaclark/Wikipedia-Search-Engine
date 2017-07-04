@@ -3,11 +3,12 @@
 
 <head>
      <meta charset="UTF-8">
-     <title>TITLE</title>
+     <title>Wikipedia Search Engine</title>
      <meta name="description" content="DESCRIPTION">
-    <link rel="stylesheet" href="PATH">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
      <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
@@ -15,24 +16,48 @@
 
  <body>
 
+<section>
    <div class="container-fluid">
      <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <p>
+          <article>
+            <p id="test">
               Click here for a random article
             </p>
 
             <form>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Search Wiki">
+              <input type="email" class="form-control" id="wiki-search" placeholder="Search Wiki" autofocus>
             </form>
-            <button class="btn">Wikipedia search</button>
-            <button class="btn"><a href="https://en.wikipedia.org/wiki/Special:Random"></a>Random</button>
+          </article>
+
+          <article class="text-center">
+            <button id="search" class="btn btn-default">Wikipedia search</button>
+               <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+                 <button class="btn btn-default">Random</button>
+                </a>
+          </article>
         </div><!-- .col-md-6 .col-md-offset-3 -->
       </div><!-- .row -->
    </div><!-- .container-fluid -->
+</section>
 
+<section>
+
+  <div class="container-fluid">
+    <div class="row">
+       <div class="col-md-12">
+           <ul id="wiki-result">
+
+           </ul>
+
+       </div><!-- .col-md-12 -->
+     </div><!-- .row -->
+  </div><!-- .container-fluid -->
+
+</section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
   <script src="main.js" type="text/javascript"></script>
  </body>
 
